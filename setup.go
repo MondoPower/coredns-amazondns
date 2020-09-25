@@ -10,7 +10,7 @@ import (
 
 	"github.com/coredns/coredns/core/dnsserver"
 	"github.com/coredns/coredns/plugin"
-	"github.com/coredns/coredns/plugin/pkg/dnsutil"
+	"github.com/coredns/coredns/plugin/pkg/parse"
 
 	"github.com/caddyserver/caddy"
 	"github.com/miekg/dns"
@@ -97,7 +97,7 @@ func setup(c *caddy.Controller) error {
 				return err
 			}
 		}
-		dnsAddr, err = dnsutil.ParseHostPort(dnsAddr, "53")
+		dnsAddr, err = parse.HostPort(dnsAddr, "53")
 		if err != nil {
 			return err
 		}

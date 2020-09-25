@@ -98,7 +98,7 @@ L:
 	}
 
 	state.SizeAndDo(m)
-	m, _ = state.Scrub(m)
+	m = state.Scrub(m)
 
 	w.WriteMsg(m)
 	return dns.RcodeSuccess, nil
