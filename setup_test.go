@@ -3,7 +3,7 @@ package amazondns
 import (
 	"testing"
 
-	"github.com/mholt/caddy"
+	"github.com/caddyserver/caddy"
 )
 
 func TestSetupRoute53(t *testing.T) {
